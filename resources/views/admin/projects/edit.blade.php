@@ -45,13 +45,11 @@
 
             <div class="mb-3">
                 <label for="type" class="form-label">Tipo</label>
-                <select class="form-select" id="type" name="type">
+                <select class="form-select" id="type" name="type_id">
                     <option>Seleziona</option>
-                    <option @selected(old('type') === 'Social Media') value="Social Media">Social Media</option>
-                    <option @selected(old('type') === 'E-Commerce') value="E-Commerce">E-Commerce</option>
-                    <option @selected(old('type') === 'Web Portal') value="Web Portal">Web Portal</option>
-                    <option @selected(old('type') === 'Landing Page') value="Landing Page">Landing Page</option>
-                    <option @selected(old('type') === 'Community') value="Community">Community</option>
+                    @foreach ($types as $type)
+                        <option @selected($project->type?->id == $type->id) value="{{ $type->id }}">{{ $type->title }}</option>
+                    @endforeach
                 </select>
             </div>
 
