@@ -28,6 +28,7 @@
                         <tr>
                             <th scope="row">{{$progetto->id}}</th>
                             <td>{{$progetto->title}}</td>
+                            <td>{{$progetto->type?->title}}</td>
                             <td>{{$progetto->description}}</td>
                             <td>{{$progetto->slug}}</td>
                             <td class="d-flex gap-2">
