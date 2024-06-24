@@ -19,6 +19,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Titolo</th>
                         <th scope="col">Descrizione</th>
+                        <th scope="col">Tipo</th>
                         <th scope="col">Slug</th>
                         <th scope="col">Azioni</th>
                     </tr>
@@ -28,8 +29,8 @@
                         <tr>
                             <th scope="row">{{$progetto->id}}</th>
                             <td>{{$progetto->title}}</td>
-                            <td>{{$progetto->type?->title}}</td>
                             <td>{{$progetto->description}}</td>
+                            <td>{{$progetto->type?->title}}</td>
                             <td>{{$progetto->slug}}</td>
                             <td class="d-flex gap-2">
                                 <a href="{{route('admin.projects.show', ['project'=>$progetto->slug])}}" class="btn btn-primary">Dettagli</a>

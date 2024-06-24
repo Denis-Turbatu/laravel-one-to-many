@@ -27,7 +27,7 @@ class StoreProjectRequest extends FormRequest
             'description' => ['required', 'min:20'],
             'start_date' => ['required'],
             'end_date' => ['required'],
-            'type' => ['required', 'min:5'],
+            'type_id'=> ['nullable'],
         ];
     }
 
@@ -53,7 +53,6 @@ class StoreProjectRequest extends FormRequest
             
             // tipo
             'type.required' => 'Il tipo deve essere inserito',
-            'type.min' => 'Il tipo deve contenere almeno 5 caratteri',
         ];
     }
 }
