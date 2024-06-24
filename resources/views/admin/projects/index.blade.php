@@ -33,7 +33,7 @@
                             <td class="d-flex gap-2">
                                 <a href="{{route('admin.projects.show', ['project'=>$progetto->slug])}}" class="btn btn-primary">Dettagli</a>
                                 <a href="{{route('admin.projects.edit', ['project'=>$progetto->slug])}}" class="btn btn-success
-                                    ">Modifica</a>s
+                                    ">Modifica</a>
                                 <form action="{{route('admin.projects.destroy', ['project'=>$progetto->slug])}}" method="POST">
                                     @csrf
                                     @method('DELETE')
